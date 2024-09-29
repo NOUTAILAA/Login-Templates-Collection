@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet link -->
+</head>
+<body>
+    <form class="container" action="">
+        <div class="input-container">
+            <div class="input-content">
+                <div class="input-dist">
+                    <div class="input-type">
+                        <input class="input-is" type="text" required placeholder="Username" />
+                        <div class="password-wrapper">
+                            <input class="input-is password-input" type="password" required placeholder="Password" />
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="submit-button">Log in</button>
+    </form>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.querySelector('.password-input');
+            const eyeIcon = document.querySelector('.toggle-password svg');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.setAttribute('fill', 'green'); // Change icon color on visibility
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.setAttribute('fill', 'black'); // Reset icon color
+            }
+        }
+    </script>
+</body>
+</html>

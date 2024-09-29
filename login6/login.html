@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        ::selection {
+            background-color: gray;
+        }
+
+        body {
+            background-color: #f0f0f0; /* Light background for body */
+            font-family: 'Arial', sans-serif; /* Set a default font */
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height for centering */
+        }
+
+        .form {
+            width: 400px;
+            height: 480px;
+            background-image: linear-gradient(to bottom, #424242, #212121);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: transform 0.3s ease;
+        }
+
+        .form:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+
+        .title {
+            color: wheat;
+            margin: 2rem 0;
+            font-size: 2.5rem; /* Increased font size */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+        }
+
+        .input {
+            margin: 0.5rem 0;
+            padding: 1rem 0.5rem;
+            width: 80%; /* Responsive width */
+            background-color: inherit;
+            color: wheat;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid wheat;
+            transition: border-color 0.3s ease; /* Transition for border color */
+        }
+
+        .input::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Lighter placeholder color */
+        }
+
+        .input:focus {
+            border-color: #1e90ff; /* Change border color on focus */
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background change on focus */
+        }
+
+        .btn {
+            height: 3rem;
+            width: 80%; /* Responsive button width */
+            margin-top: 2rem;
+            background-color: wheat;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold; /* Bold text for button */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for effects */
+            cursor: pointer;
+            box-shadow: 0 0 10px antiquewhite, 0 0 10px antiquewhite;
+        }
+
+        .btn:hover {
+            background-color: #ffe4b5; /* Lighten button color on hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+        }
+
+        .forgot-password {
+            margin-top: 1rem;
+            color: wheat;
+            text-decoration: underline;
+            cursor: pointer; /* Cursor pointer to indicate link */
+            transition: color 0.3s ease; /* Transition for color change */
+        }
+
+        .forgot-password:hover {
+            color: #1e90ff; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form class="form" action="" method="POST">
+            <p class="title">Login</p>
+            <input placeholder="Username" class="username input" type="text" required />
+            <input placeholder="Password" class="password input" type="password" required />
+            <button class="btn" type="submit">Login</button>
+            <p class="forgot-password">Forgot Password?</p>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    background-color: #f0f8ff; /* Couleur de fond douce */
+    font-family: 'Arial', sans-serif; /* Police de caractères simple */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Hauteur de la fenêtre */
+    margin: 0; /* Pas de marges */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Largeur maximale */
+}
+
+.login-card {
+    background: #ffffff; /* Couleur de fond de la carte */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 30px; /* Padding interne */
+    text-align: center; /* Centrer le texte */
+}
+
+.title {
+    color: #d5006d; /* Couleur du titre */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-size: 24px; /* Taille du titre */
+}
+
+.input-box {
+    position: relative; /* Position pour les éléments enfants */
+    margin-bottom: 20px; /* Espace sous chaque champ */
+}
+
+.input-box input {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Padding interne */
+    border: 2px solid #d5006d; /* Bordure rose */
+    border-radius: 5px; /* Coins arrondis */
+    outline: none; /* Pas d'outline */
+    transition: border-color 0.3s; /* Transition douce pour la bordure */
+}
+
+.input-box input:focus {
+    border-color: #c51162; /* Couleur de bordure au focus */
+}
+
+.placeholder {
+    position: absolute; /* Position absolue pour le placeholder */
+    left: 12px; /* Décalage à gauche */
+    top: 10px; /* Décalage en haut */
+    transition: 0.2s; /* Transition douce */
+    color: #aaa; /* Couleur du placeholder */
+    pointer-events: none; /* Ne pas interférer avec le clic */
+}
+
+.input-box input:focus + .placeholder,
+.input-box input:valid + .placeholder {
+    top: -15px; /* Déplacement vers le haut */
+    font-size: 12px; /* Réduction de la taille de la police */
+    color: #d5006d; /* Couleur au focus */
+}
+
+.login-button {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Padding interne */
+    background-color: #d5006d; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    font-size: 16px; /* Taille de la police */
+    transition: background-color 0.3s; /* Transition douce */
+}
+
+.login-button:hover {
+    background-color: #c51162; /* Couleur de fond au survol */
+}
+
+.signup-link {
+    margin-top: 10px; /* Espace au-dessus */
+    font-size: 14px; /* Taille de la police */
+}
+
+.signup-link a {
+    color: #d5006d; /* Couleur du lien */
+    text-decoration: none; /* Pas de soulignement */
+}

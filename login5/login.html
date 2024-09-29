@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Vous pouvez ajouter d'autres styles ici */
+    </style>
+</head>
+<body class="bg-gray-200">
+
+    <div class="flex flex-col items-center justify-center h-screen">
+        <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Sign Up</h2>
+            <form class="flex flex-col" id="signupForm">
+                <input placeholder="First Name" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" required>
+                <input placeholder="Last Name" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" required>
+                <input placeholder="Email" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="email" required>
+                <input placeholder="Confirm Email" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="email" required>
+                <input placeholder="Password" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="password" required>
+                <input placeholder="Confirm Password" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="password" required>
+                
+                <label class="text-sm mb-2 text-gray-900 cursor-pointer" for="gender">
+                    Gender
+                </label>
+                <select class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label class="text-sm mb-2 text-gray-900 cursor-pointer" for="age">
+                    Age
+                </label>
+                <input class="bg-gray-100 text-gray-900 border-0 rounded-md p-2" id="age" type="date" required>
+
+                <p class="text-gray-900 mt-4"> Already have an account? <a class="text-sm text-blue-500 hover:underline mt-4" href="#">Login</a></p>
+                
+                <button class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 transition ease-in-out duration-150" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            const inputs = this.querySelectorAll('input[required], select[required]');
+            inputs.forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                    input.classList.add('border-red-500'); // Ajoute une bordure rouge
+                    input.placeholder = "This field is required"; // Change le placeholder
+                } else {
+                    input.classList.remove('border-red-500'); // Enlève la bordure rouge si rempli
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault(); // Empêche l'envoi du formulaire si des champs sont vides
+            }
+        });
+    </script>
+</body>
+</html>

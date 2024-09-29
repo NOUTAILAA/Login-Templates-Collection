@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Cache le débordement */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0; /* Initialement caché pour l'animation */
+    transform: translateY(20px); /* Décalage vers le bas pour l'animation */
+    animation: fadeInUp 0.6s forwards; /* Animation d'apparition */
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+    border-radius: 12px; /* Coins arrondis plus marqués */
+    transition: transform 0.3s; /* Transition pour l'effet de zoom */
+}
+
+.login-box:hover {
+    transform: scale(1.02); /* Légère montée au survol de la boîte */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 0.5s forwards; /* Animation de texte */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555; /* Couleur de texte plus douce */
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0; /* Initialement caché pour l'animation */
+    animation: fadeIn 0.5s forwards; /* Animation d'apparition */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px; /* Ajout de padding pour plus de confort */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Ajout d'une ombre */
+}
+
+.input-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre au focus */
+}
+
+/* Style pour les boutons */
+.login-btn, .register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.login-btn {
+    background-color: #007BFF; /* Couleur du bouton Se connecter */
+}
+
+.register-btn {
+    background-color: #28A745; /* Couleur du bouton Créer un compte */
+    margin-top: 10px; /* Espace entre les boutons */
+}
+
+/* Effet de survol */
+.login-btn:hover {
+    background-color: #0056b3; /* Couleur au survol du bouton Se connecter */
+    transform: translateY(-2px); /* Légère montée au survol */
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4); /* Ombre au survol */
+}
+
+.register-btn:hover {
+    background-color: #218838; /* Couleur au survol du bouton Créer un compte */
+    transform: translateY(-2px); /* Légère montée au survol */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Ombre au survol */
+}
+
+/* Ajoutez une animation lorsque la page est chargée */
+.login-btn, .register-btn {
+    opacity: 0; /* Initialement caché pour l'animation */
+    transform: translateY(20px); /* Décalage vers le bas pour l'animation */
+    animation: fadeInUp 0.6s forwards; /* Animation d'apparition */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s; /* Transition de couleur */
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Couleur au survol */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+

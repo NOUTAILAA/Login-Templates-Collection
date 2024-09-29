@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f4f8, #cfd9df);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 2.5em;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 1.5em;
+            font-size: 2em;
+            color: #007bff;
+            text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.5);
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+
+        .input-field {
+            padding: 0.8em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            color: #333;
+            transition: border 0.3s, background 0.3s;
+            font-size: 1em;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border: 2px solid #007bff;
+            background: #ffffff;
+        }
+
+        .submit-button {
+            padding: 0.8em;
+            border: none;
+            border-radius: 50px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 1em;
+            margin-top: 1em; /* Ajoutez cette ligne pour l'espace entre le bouton et l'input */
+
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            margin-top: 1em;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+    <title>Connexion</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <div class="input-group">
+            <input type="text" class="input-field" placeholder="Nom d'utilisateur" required>
+            <input type="password" class="input-field" placeholder="Mot de passe" required>
+        </div>
+        <button class="submit-button">Se connecter</button>
+        <div class="footer">© 2024 Votre Société</div>
+    </div>
+</body>
+</html>
